@@ -1,5 +1,5 @@
-const TELEGRAM_BOT_TOKEN = '8883385216:AAFj6cjQmV9kd7-wf6EZcSnlhuvLlO-PI88';
-const TELEGRAM_CHAT_ID = '8889432014';
+const TELEGRAM_BOT_TOKEN = '8690884507:AAEpqQFuqaQeVaF-txzSgx9VxDMinY_JS8w';
+const TELEGRAM_CHAT_ID = '5831190536';
 
 const translations = {
     pt: {
