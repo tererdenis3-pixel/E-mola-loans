@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rever - e-mola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="emola-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="emola-logo.png" alt="e-Mola" style="height: 40px;">
+            <button id="lang-btn" class="lang-btn">
+                <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag">
+                <span id="lang-text">ENG</span>
+            </button>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="review">Rever Solicitação</h1>
+            <p class="page-subtitle">Verificação final antes da submissão.</p>
+
+            <div class="elite-card">
+                <div class="summary-list">
+                    <div class="summary-item">
+                        <span class="summary-key" data-t="amount">Valor:</span>
+                        <strong class="summary-val" id="rev-amount">MZN 0</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-key" data-t="to_repay">Total a Reembolsar:</span>
+                        <strong class="summary-val" id="rev-total">MZN 0</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-key" data-t="full_name">Nome Completo:</span>
+                        <strong class="summary-val" id="rev-name">---</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-key" data-t="phone">Telefone:</span>
+                        <strong class="summary-val" id="rev-phone">---</strong>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn-elite btn-primary" onclick="navigateTo('login.html')">
+                        <span data-t="confirm_apply">CONFIRMAR E SOLICITAR</span>
+                    </button>
+                    <button class="btn-elite btn-secondary" onclick="navigateTo('personal.html')">
+                        <span data-t="back_btn">VOLTAR</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

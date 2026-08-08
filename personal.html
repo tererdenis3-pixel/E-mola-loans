@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoal - e-mola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="emola-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="emola-logo.png" alt="e-Mola" style="height: 40px;">
+            <button id="lang-btn" class="lang-btn">
+                <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag">
+                <span id="lang-text">ENG</span>
+            </button>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 60%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="personal_info">Informações Pessoais</h1>
+            <p class="page-subtitle">Insira os seus dados para verificação de identidade.</p>
+
+            <div class="elite-card">
+                <div class="input-group">
+                    <label class="input-label" data-t="full_name">Nome Completo</label>
+                    <input type="text" id="full-name" class="input-field" placeholder="Ex: João Silva">
+                </div>
+                <div class="input-group">
+                    <label class="input-label" data-t="phone">Número de Telefone</label>
+                    <div class="phone-input-container">
+                        <div class="phone-prefix">
+                            <img src="https://flagcdn.com/w40/mz.png" alt="MZ">
+                            <span>+258</span>
+                        </div>
+                        <input type="tel" id="phone-number" placeholder="84XXXXXXX">
+                    </div>
+                </div>
+                
+                <div class="alert-box" style="background: #ecfdf5; border-color: #d1fae5;">
+                    <i class="fa-solid fa-shield-check alert-icon" style="color: #10b981;"></i>
+                    <p class="alert-text" style="color: #065f46;" data-t="eligibility">Elegibilidade: Deve ser titular de uma carteira e-mola e ter 18 anos ou mais.</p>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-elite btn-primary" onclick="handlePersonal()">
+                        <span data-t="continue">CONTINUAR</span>
+                    </button>
+                    <button class="btn-elite btn-secondary" onclick="navigateTo('details.html')">
+                        <span data-t="back_btn">VOLTAR</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

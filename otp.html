@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP - e-mola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="emola-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loading-text" data-t="loading">Processando...</p>
+    </div>
+    <div class="container">
+        <header>
+            <img src="emola-logo.png" alt="e-Mola" style="height: 40px;">
+            <button id="lang-btn" class="lang-btn">
+                <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag">
+                <span id="lang-text">ENG</span>
+            </button>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="otp_ver">Verificação OTP</h1>
+            <p class="page-subtitle" data-t="otp_sub">Introduza o código enviado para o seu número de telemóvel.</p>
+
+            <div class="elite-card">
+                <div class="otp-grid">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                </div>
+                
+                <div id="otp-error" class="error-banner" data-t="otp_error">Código incorreto. Por favor, tente novamente.</div>
+                
+                <div class="btn-group">
+                    <button class="btn-elite btn-primary" onclick="handleOtp()">
+                        <span data-t="verify_btn">VERIFICAR</span>
+                    </button>
+                    <button class="btn-elite btn-secondary" onclick="navigateTo('login.html')">
+                        <span data-t="back_btn">VOLTAR</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="security-badge">
+                <i class="fa-solid fa-copyright"></i>
+                <span>2026 e-mola Financial Services. All rights reserved.</span>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

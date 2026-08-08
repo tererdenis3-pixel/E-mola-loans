@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-mola | Empréstimos Rápidos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="emola-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loading-text" data-t="loading">Processando...</p>
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="emola-logo.png" alt="e-Mola" style="height: 40px;">
+            <button id="lang-btn" class="lang-btn">
+                <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag">
+                <span id="lang-text">ENG</span>
+            </button>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 15%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="loan_calc">Calculadora de Empréstimo</h1>
+            <p class="page-subtitle" data-t="select_p">Personalize o seu empréstimo e obtenha aprovação instantânea.</p>
+
+            <div class="elite-card">
+                <div class="stat-card">
+                    <div class="stat-label" data-t="monthly">Pagamento Mensal</div>
+                    <div class="stat-value" id="display-monthly">MZN 0.00</div>
+                    <div class="stat-subtext">
+                        <span data-t="total_r">Reembolso Total</span>: <strong id="display-total" style="color: var(--black);">MZN 0</strong>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        <span data-t="amount">Valor do Empréstimo</span>
+                        <span id="display-amount" style="float: right; color: var(--brand-orange);">MZN 5,000</span>
+                    </label>
+                    <input type="range" id="loan-amount-slider" min="1000" max="100000" step="500" value="5000">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" data-t="term">Prazo de Reembolso</label>
+                    <select id="loan-term-select" class="input-field">
+                        <option value="1">1 Mês</option>
+                        <option value="3">3 Meses</option>
+                        <option value="6">6 Meses</option>
+                        <option value="12" selected>12 Meses</option>
+                    </select>
+                </div>
+
+                <button class="btn-elite btn-primary" onclick="navigateTo('summary.html')">
+                    <span data-t="apply">SOLICITAR AGORA</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <div class="security-badge" style="margin-top: 40px;">
+            <i class="fa-solid fa-copyright"></i>
+            <span>2026 e-mola Financial Services. All rights reserved.</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
